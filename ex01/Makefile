@@ -1,7 +1,6 @@
 SRCS	=	main.cpp \
 			Zombie.cpp \
-			newZombie.cpp \
-			randomChump.cpp 
+			ZombieHorde.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
