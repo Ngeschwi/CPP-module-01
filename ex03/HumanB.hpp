@@ -2,17 +2,18 @@
 # define HUMANB_HPP
 
 # include "Weapon.hpp"
+# include "HumanA.hpp"
 
 class HumanB
 {
 	private:
 		std::string	name;
-		Weapon*		club;
 	
 	public:
-		HumanA(std::string name);
-		~HumanA();
+		HumanB(std::string name);
+		~HumanB();
 
+		Weapon*		club;
 		void	attack() const;
 		void	setWeapon(Weapon club);
 };
