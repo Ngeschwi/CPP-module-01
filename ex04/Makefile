@@ -2,7 +2,7 @@ SRCS	=	main.cpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
-INC		=	-I/Replace.hpp
+LINK	=	-I/Replace.hpp
 
 NAME	=	replace
 CC		=	clang++
@@ -12,7 +12,7 @@ RM		=	rm -rf
 all : $(NAME)
 
 %.o : %.cpp
-	$(CC) $(CFLAGS) $(INC) -o $@ -c $<
+	$(CC) $(CFLAGS) $(LINK) -o $@ -c $<
 
 $(NAME) : $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME) 
