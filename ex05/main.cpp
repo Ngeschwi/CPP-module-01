@@ -12,4 +12,6 @@ int	main()
 	karen.complain("WARNING");
 	std::cout << "Error level :" << std::endl;
 	karen.complain("ERROR");
+	std::cout << "Error level :" << std::endl;
+	karen.complain("coucou");
 }
