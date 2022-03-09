@@ -10,11 +10,11 @@
 
 struct	data
 {
-	std::string	s1;
-	std::string	s2;
-	std::string	filename;
-	std::string	file_line;
-	std::string	file_replace;
+	std::string		s1;
+	std::string		s2;
+	std::string		filename;
+	std::string		file_line;
+	std::string		file_replace;
 	std::ofstream	ofs;
 };
 

@@ -7,7 +7,9 @@ void	replace(data *data)
 	found = data->file_line.find(data->s1);
 	while (found != std::string::npos)
 	{
-		data->file_line.replace(found, data->s1.length(), data->s2);
+		std::cout << data->s1.size() << "\n";
+		data->s1.erase(found, data->s1.size());
+		data->s1.insert(found, data->s2);
 		found = data->file_line.find(data->s1, found + 1);
 	}
 	data->ofs << data->file_line << std::endl;
@@ -37,9 +39,9 @@ int	main(int argc, char **argv)
 
 	if (argc == 4)
 	{
-		data.s1 = argv[1];
-		data.s2 = argv[2];
-		data.filename = argv[3];
+		data.filename = argv[1];
+		data.s1 = argv[2];
+		data.s2 = argv[3];
 		if ((data.s1).size() != 0 && (data.s2).size() != 0 && (data.filename).size() != 0)
 			get_file(&data);
 	}
