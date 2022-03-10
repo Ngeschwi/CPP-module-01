@@ -6,7 +6,7 @@ LINK	=	-I/Replace.hpp
 
 NAME	=	replace
 CC		=	clang++
-CFLAGS	=	#-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror
 RM		=	rm -rf
 
 all : $(NAME)

@@ -7,9 +7,8 @@ void	replace(data *data)
 	found = data->file_line.find(data->s1);
 	while (found != std::string::npos)
 	{
-		std::cout << data->s1.size() << "\n";
-		data->s1.erase(found, data->s1.size());
-		data->s1.insert(found, data->s2);
+		data->file_line.erase(found, data->s1.size());
+		data->file_line.insert(found, data->s2);
 		found = data->file_line.find(data->s1, found + 1);
 	}
 	data->ofs << data->file_line << std::endl;
